@@ -1,0 +1,244 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin:0;
+  font-family:sans-serif;
+  background-color:black;
+}
+.toggle input{
+  display: none;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: sans-serif;
+}
+.logo img{
+  width:10%;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  padding:0;
+  margin: 0;
+  list-style: none;
+  text-align:right;
+}
+.nav-links li{
+  list-style: none;
+  display: inline-block;
+}
+.nav-links a{
+  color:white;
+  font-size:18px;
+  padding:5px 15px;
+  text-decoration: none;
+  text-align:right;
+  display: block;
+}
+.nav-links a:hover{
+  background-color: white;
+  color: black;
+}
+.bar{
+  display: none;
+}
+.bar div{
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+@media screen and (max-width:1024px)  {
+  .nav-links{
+    width:60%;
+  }
+}
+@media screen and (max-width:768px)  {
+body{
+  overflow-x: hidden;
+}
+  .nav-links{
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top:8vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 30%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .toggle input:checked~.nav-links{
+    transform: translateX(0);
+  }
+  .toggle input:checked~.nav-links li{
+    opacity: 1;
+    transition: 1s ease-in;
+  }
+  .bar{
+    display: block;
+  }
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+  margin: -50px 0 30px 0;
+  padding-top: 5px;
+  color:white;
+}
+.special{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin:10px 0;
+  background-color:#181818;
+}
+.colum{
+  width: 48%;
+  margin: 0 0 0 0;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 0;
+/*  box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25),
+  0 10px 10px rgba(255,255,255,.22);*/
+  transition: .4s;
+}
+.special .content{
+  width: 100%;
+  height:400px;
+  text-align: center;
+  margin: 50px 0;
+  color: white;
+
+}
+.special .image img{
+  width: 75%;
+  object-fit: fill;
+}
+.special h3{
+  font-size: 5rem;
+}
+.special p{
+  font-size:1.7rem;
+  padding: 1rem 0;
+}
+.special button{
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  color: red;
+  width: 30%;
+padding: .8rem 3rem;
+outline: none;
+border: .2rem solid red;
+margin-top: 1rem;
+border-radius:.5rem;
+cursor: pointer;
+background-color: black;
+overflow: hidden;
+}
+.button-0:hover{
+  box-shadow: 0 3px 6px rgba(255,255,255,0.16),
+  0 3px 6px rgba(255,255,255,0.23);
+  transform: translate(0,-8px);
+}
+h3{
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+  padding-top: 10px;
+}
+a{
+  text-decoration: none;
+}
+.box-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+.box{
+  width: 20%;
+  margin:15px;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 0;
+  box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25),
+  0 10px 10px rgba(255,255,255,.22);
+  transition: .4s;
+  background-color: #f2f2f2;
+}
+.box:hover{
+  box-shadow: 0 3px 6px rgba(255,255,255,0.16),
+  0 3px 6px rgba(255,255,255,0.23);
+  transform: translate(0,-8px);
+}
+.dish{
+  width:100%;
+  height:200px;
+  margin:0;
+  display: block;
+  padding:0;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+}
+.box-container button{
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  width: 100%;
+padding: 15px;
+outline: none;
+border: 0;
+margin-top: 5px;
+border-bottom-right-radius: 20px;
+border-bottom-left-radius: 20px;
+cursor: pointer;
+}
+.button-1{
+  background-color: #8E3623;
+}
+.button-2{
+  background-color: #1628DC;
+}
+.button-3{
+  background-color: #DB6E23;
+}
+.button-4{
+  background-color: #C6291A;
+}
+.button-5{
+  background-color: #C21C9F;
+}
+.button-6{
+  background-color: #641110;
+}
+.button-7{
+  background-color: #FC0404;
+}
+.button-8{
+  background-color: #850F04;
+}
